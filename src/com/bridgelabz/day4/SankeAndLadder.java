@@ -6,17 +6,17 @@ public class SankeAndLadder {
 
     public static void main(String[] args) {
         System.out.println("WELCOME_TO_THE_GAME");
-        int diceRoll = (int) (Math.round(Math.random() * 10) % 7);
         int position = 0;
         String playerName = "Mel";
         String playerId = "ID22022";
 
-        System.out.println("The point for the player " + playerName + " with ID: " + playerId + " after dice roll is = " + diceRoll);
         while (100 > position) {
             int option = (int) (Math.round(Math.random() * 10) % 3);
+            int diceRoll = (int) (Math.round(Math.random() * 10) % 7);
             switch (option) {
                 case SNAKE:
                     position -= diceRoll;
+                    System.out.println("The point for the player " + playerName + " with ID: " + playerId + " after dice roll is = " + diceRoll);
                     System.out.println("You have got the snake, position = " + position);
                     if(position < 0){
                         position = 0;
@@ -26,7 +26,12 @@ public class SankeAndLadder {
 
                 case LADDER:
                     position += diceRoll;
+                    System.out.println("The point for the player " + playerName + " with ID: " + playerId + " after dice roll is = " + diceRoll);
                     System.out.println("You have got the ladder, position  = " + position);
+                    if(position > 100){
+                        position -= diceRoll;
+                        System.out.println("You have got ahead 100");
+                    }
                     break;
 
                 default:

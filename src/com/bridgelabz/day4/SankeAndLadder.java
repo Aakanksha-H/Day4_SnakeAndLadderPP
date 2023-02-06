@@ -12,7 +12,7 @@ public class SankeAndLadder {
 
         while (100 > position) {
             int option = (int) (Math.round(Math.random() * 10) % 3);
-            int diceRoll = (int) (Math.round(Math.random() * 10) % 7);
+            int diceRoll = (int)(Math.random() * 6) + 1;;
             switch (option) {
                 case SNAKE:
                     position -= diceRoll;

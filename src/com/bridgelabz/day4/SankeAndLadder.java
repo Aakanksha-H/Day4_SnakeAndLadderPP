@@ -3,7 +3,7 @@ package com.bridgelabz.day4;
 public class SankeAndLadder {
     public static void main(String[] args) {
         System.out.println("WELCOME_TO_THE_GAME");
-        int diceRoll = (int) (Math.round(Math.random() * 10) % 7);;
+        int diceRoll =  (int)(Math.random() * 6) + 1;
         String playerName = "Mel";
         String playerId = "ID22022";
 
